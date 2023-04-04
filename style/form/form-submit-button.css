@@ -19,11 +19,18 @@ form button {
     border-radius: 100%;
     width: 3.375rem;
     height: 3.375rem;
+    transition: .2s;
+    cursor: pointer;
 }
 
 form button > img {
     width: 1.25rem;
     height: 1.25rem;
+}
+
+form button:hover, form button:focus-visible {
+    background: var(--off-black);
+    transition: .2s;
 }
 
 @media screen and (min-width: 600px) {
