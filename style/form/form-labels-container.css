@@ -1,0 +1,38 @@
+.form-labels-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(.875rem, 1.25rem, 1.75rem);
+}
+
+.form-labels-container > label span:not(.error) {
+    text-transform: uppercase;
+    color: var(--smokey-grey);
+    font-size: .75rem;
+    letter-spacing: .175rem;
+}
+
+.form-labels-container > label span.error {
+    color: var(--light-red);
+    font: italic .75rem Poppins;
+    /* might delete this later, unnecessary */
+}
+
+.form-labels-container > label input {
+    display: block;
+    margin-top: .25rem;
+    padding: .75rem;
+    border: 1px solid var(--light-grey); 
+    border-radius: .25rem;
+    width: 100%;
+    max-width: 8rem;
+    color: var(--off-black);
+}
+
+.form-labels-container > label input, .form-labels-container > label input::placeholder {
+    font-weight: 700;
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+}
+
+.form-labels-container > label input:hover, .form-labels-container > label input:focus-visible, .form-labels-container > label input:active {
+    outline: 2px solid var(--purple);
+}
