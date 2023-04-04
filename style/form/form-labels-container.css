@@ -22,7 +22,7 @@
     margin-top: .25rem;
     padding: .75rem;
     border: 1px solid var(--light-grey); 
-    border-radius: .25rem;
+    border-radius: .5rem;
     width: 100%;
     max-width: 8rem;
     color: var(--off-black);
@@ -40,5 +40,9 @@
 @media screen and (min-width: 600px) {
     .form-labels-container {
         margin-right: 7rem;
+    }
+
+    .form-labels-container > label input {
+        padding: 1rem;
     }
 }
