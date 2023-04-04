@@ -13,11 +13,17 @@ main {
     gap: clamp(.875rem, 1.25rem, 1.75rem);
 }
 
-.form-labels-container > label span {
+.form-labels-container > label span:not(.error) {
     text-transform: uppercase;
     color: var(--smokey-grey);
     font-size: .75rem;
     letter-spacing: .175rem;
+}
+
+.form-labels-container > label span.error {
+    color: var(--light-red);
+    font: italic .75rem Poppins;
+    /* might delete this later, unnecessary */
 }
 
 .form-labels-container > label input {
