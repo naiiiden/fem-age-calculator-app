@@ -1,3 +1,27 @@
+.button-separator-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.dec-separator {
+    border: 1px solid var(--light-grey);
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
 form button {
+    position: relative;
     border: none;
+    background: var(--purple);
+    border-radius: 100%;
+    width: 3.375rem;
+    height: 3.375rem;
+}
+
+form button > img {
+    width: 1.25rem;
+    height: 1.25rem;
 }
