@@ -18,8 +18,9 @@
 }
 
 body {
-    width: 100%;
     min-height: 100vh;
     font-family: Poppins, sans-serif;
     background: var(--off-white);
+    display: grid;
+    place-content: center;
 }
