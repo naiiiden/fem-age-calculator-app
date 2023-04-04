@@ -1,0 +1,15 @@
+.dates-container p {
+    font: italic 800 12.5vw Poppins;
+    color: var(--off-black);
+    line-height: 1.125;
+}
+
+.dates-container p span {
+    color: var(--purple);
+}
+
+@media screen and (min-width: 600px) {
+    .dates-container p {
+        font-size: 5.5rem;
+    }
+}
