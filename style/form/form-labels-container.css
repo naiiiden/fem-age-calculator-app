@@ -24,7 +24,7 @@
     border: 1px solid var(--light-grey); 
     border-radius: .5rem;
     width: 100%;
-    max-width: 8rem;
+    max-width: 9rem;
     color: var(--off-black);
     transition: .2s;
 }
@@ -42,7 +42,7 @@
 
 @media screen and (min-width: 600px) {
     .form-labels-container {
-        margin-right: 7rem;
+        margin-right: 10vw;
     }
 
     .form-labels-container > label input {

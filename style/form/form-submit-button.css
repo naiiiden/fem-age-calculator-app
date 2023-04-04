@@ -39,8 +39,8 @@ form button:hover, form button:focus-visible {
     }
 
     form button {
-        width: 5rem;
-        height: 5rem;
+        width: 5.5rem;
+        height: 5.5rem;
     }
 
     form button > img {
