@@ -45,6 +45,10 @@ document.querySelector(".form-submit-button").addEventListener("click", (e) => {
         document.querySelector("#year-input").style.borderColor = "#ff5757";
         document.querySelector(".year-error").textContent = "Must be in the past";
         isValid = false;
+    } else if (yearOfBirth < 0) {
+        document.querySelector("#year-input").style.borderColor = "#ff5757";
+        document.querySelector(".year-error").textContent = "Must be positive";
+        isValid = false;
     } else {
         document.querySelector("#year-input").style.borderColor = "#dbdbdb";
         document.querySelector(".year-error").textContent = "";
