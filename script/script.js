@@ -5,10 +5,26 @@ document.querySelector(".form-submit-button").addEventListener("click", (e) => {
     const monthOfBirth = parseInt(document.getElementById("month-input").value);
     const yearOfBirth = parseInt(document.getElementById("year-input").value);
 
+    if (isNaN(dayOfBirth) || isNaN(monthOfBirth) || isNaN(yearOfBirth)) {
+        document.querySelectorAll(".error").forEach(error => {
+            error.textContent = "This field is required";
+        });
+        document.querySelectorAll("input").forEach(input => {
+            input.style.borderColor = "#ff5757";
+        });
+        return;
+    } else {
+        document.querySelectorAll(".error").forEach(error => {
+            error.textContent = "";
+        });
+        document.querySelectorAll("input").forEach(input => {
+            input.style.borderColor = "#dbdbdb";
+        });
+    }
+
     // Validate the input
     const maxDaysInMonth = new Date(yearOfBirth, monthOfBirth, 0).getDate();
     if (isNaN(dayOfBirth) || dayOfBirth < 1 || dayOfBirth > maxDaysInMonth || isNaN(monthOfBirth) || monthOfBirth < 1 || monthOfBirth > 12 || isNaN(yearOfBirth)) {
-        console.error("Invalid date entered");
         document.querySelector(".day-error").textContent = "Must be a valid date";
         document.querySelectorAll("input").forEach(input => {
             input.style.borderColor = "#ff5757";
