@@ -21,6 +21,16 @@ document.querySelector(".form-submit-button").addEventListener("click", (e) => {
         });
     }
 
+    const currentYear = new Date().getFullYear();
+    if (yearOfBirth > currentYear) {
+        document.querySelector(".year-error").textContent = "Must be in the past";
+        document.getElementById("year-input").style.borderColor = "#ff5757";
+        return;
+    } else {
+        document.querySelector(".year-error").textContent = "";
+        document.getElementById("year-input").style.borderColor = "#dbdbdb";
+    }
+
     // Create a Date object for the user's birthdate
     const birthdate = new Date(yearOfBirth, monthOfBirth - 1, dayOfBirth);
     const currentDate = new Date();
