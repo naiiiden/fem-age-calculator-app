@@ -5,6 +5,10 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 ## Live Preview
 https://naiiiden.github.io/fem-age-calculator-app/
 
+### Other calculators:
+https://github.com/naiiiden/calculator-app <br/>
+https://github.com/naiiiden/tip-calculator-app
+
 ### Screenshots
 #### Mobile Design
 ![mobile](/screenshots/mobile.png)
