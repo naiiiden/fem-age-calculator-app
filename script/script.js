@@ -65,15 +65,14 @@ document.querySelector(".form-submit-button").addEventListener("click", (e) => {
         let differenceInMonths = currentDate.getMonth() - birthdate.getMonth();
         let differenceInDays = currentDate.getDate() - birthdate.getDate();
 
-        // Adjust years, months, and days if needed
-        if (differenceInMonths < 0 || (differenceInMonths === 0 && differenceInDays < 0)) {
+        if (differenceInDays < 0) {
+            const maxDaysInLastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+            differenceInDays += maxDaysInLastMonth;
+            differenceInMonths--;
+        }
+        if (differenceInMonths < 0) {
             differenceInYears--;
             differenceInMonths += 12;
-            if (differenceInDays < 0) {
-                const maxDaysInLastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
-                differenceInDays += maxDaysInLastMonth;
-                differenceInMonths--;
-            }
         }
 
         document.querySelector(".years-number").textContent = differenceInYears;
