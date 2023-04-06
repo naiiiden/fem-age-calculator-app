@@ -79,5 +79,35 @@ document.querySelector(".form-submit-button").addEventListener("click", (e) => {
         document.querySelector(".years-number").textContent = differenceInYears;
         document.querySelector(".months-number").textContent = differenceInMonths;
         document.querySelector(".days-number").textContent = differenceInDays;
+
+        let currentYears = 0;
+        let currentMonths = 0;
+        let currentDays = 0;
+
+        // Set the final value of the age numbers
+        const finalYears = differenceInYears;
+        const finalMonths = differenceInMonths;
+        const finalDays = differenceInDays;
+
+        // Use setInterval to increment the age numbers
+        const intervalId = setInterval(() => {
+            if (currentYears < finalYears) {
+                currentYears++;
+                document.querySelector(".years-number").textContent = currentYears;
+            }
+            if (currentMonths < finalMonths) {
+                currentMonths++;
+                document.querySelector(".months-number").textContent = currentMonths;
+            }
+            if (currentDays < finalDays) {
+                currentDays++;
+                document.querySelector(".days-number").textContent = currentDays;
+            }
+
+            // Stop the interval when all age numbers have reached their final value
+            if (currentYears === finalYears && currentMonths === finalMonths && currentDays === finalDays) {
+                clearInterval(intervalId);
+            }
+        }, 10);
     }
 });
