@@ -80,7 +80,7 @@ document.querySelector(".form-submit-button").addEventListener("click", (e) => {
         document.querySelector(".months-number").textContent = differenceInMonths;
         document.querySelector(".days-number").textContent = differenceInDays;
 
-        document.querySelector(".dates-container").setAttribute("aria-label", `You are ${differenceInYears} years, ${differenceInMonths} months and ${differenceInDays} days old`);
+        document.querySelector(".dates-container").setAttribute("aria-label", `You are ${differenceInYears} years, ${differenceInMonths} months and ${differenceInDays} ${differenceInDays > 1 || differenceInDays == 0 ? 'days' : 'day'} old`);
 
         let currentYears = 0;
         let currentMonths = 0;
